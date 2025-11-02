@@ -26,7 +26,10 @@ public class Dev {
         }
     }
 
-    public void calcularXp(){
+    public double calcularTotalXp(){
+      return this.conteudoInscritos
+              .stream()
+              .mapToDouble(conteudo -> conteudo.calcularXp()).sum();
 
     }
 
